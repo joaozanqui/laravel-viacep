@@ -37,43 +37,48 @@ Este projeto é um exemplo de aplicação Laravel + Vue.Js  que realiza consulta
 
 ## Passo a Passo de Instalação e Uso
 
+Após ter o Docker instalado em sua máquina, será preciso seguir os seguintes passos:
+
+### 1. Clonar o repositório
 ```bash
-# 1. Clonar o repositório
 git clone https://github.com/joaozanqui/laravel-viacep.git
 ```
+### 2. Entrar na pasta do projeto
 ```bash
-# 2. Entrar na pasta do projeto
 cd laravel-viacep/
 ```
+### 3. Copiar do arquivo de exemplo .env
 ```bash
-# 3. Copiar do arquivo de exemplo .env
 cp .env.example .env
 ```
+### 4. Subir os containers Docker (app e banco)
 ```bash
-# 4. Subir os containers Docker (app e banco)
 docker-compose up -d --build
 ```
+### 5. Dar permissão de Admin para a pasta Storage
 ```bash
-# 5. Acessar o container da aplicação
+sudo chmod -R 777 ./storage/
+```
+### 6. Acessar o container da aplicação
+```bash
 docker exec -it viacep-app bash
 ```
+### 7. Instalar as dependências do PHP (Laravel)
 ```bash
-# 6. Instalar as dependências do PHP (Laravel)
 composer install
 ```
+### 8. Instalar as dependências do front-end (Vue, etc.)
 ```bash
-# 7. Instalar as dependências do front-end (Vue, etc.)
 npm install
 ```
+### 9. Rodar as migrations para criar a tabela de endereços
 ```bash
-# 8. Rodar as migrations para criar a tabela de endereços
 php artisan migrate
 ```
+### 10. Carregar os arquivos do front-end 
 ```bash
-# 9. Gerar a chave da aplicação Laravel
-php artisan key:generate
-```
-```bash
-# 10. Carregar os arquivos do front-end 
 npm run watch
 ```
+
+### 11. Abrir o app no navegador 
+[Localhost:9002](http://localhost:9002/)
