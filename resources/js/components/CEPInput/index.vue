@@ -43,10 +43,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations(["setLoadCEP"]),
-
     async buscaCEP(cep) {
-      this.setLoadCEP(true);
       try {
         const response = await httpClient.get(
           `https://viacep.com.br/ws/${cep}/json/`
@@ -54,8 +51,6 @@ export default {
         return response.data;
       } catch (err) {
         console.log(err);
-      } finally {
-        this.setLoadCEP(false);
       }
     },
   },

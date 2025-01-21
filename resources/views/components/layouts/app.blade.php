@@ -7,17 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>
-        Teste
+        Laravel ViaCep API
     </title>
-
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
     @stack('styles')
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 </head>
 
 <body>
-
-    @yield('navbar')
-
     @yield('content')
 
     @stack('scripts')

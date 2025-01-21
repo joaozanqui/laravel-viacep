@@ -1,4 +1,4 @@
-<x-layouts.home.pages title="Serviços">
+<x-layouts.home.pages title="Início">
     @section('container')
         <div id="app">
             <home-index 
