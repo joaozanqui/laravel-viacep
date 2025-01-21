@@ -1,0 +1,14 @@
+.docker/database-data
+./.env
+vendor
+node_modules
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/testing/*
+storage/framework/views/*
+storage/app/*
+bootstrap/cache/*
+Dockerfile
+docker-compose.yml
+database_data
+Makefile
